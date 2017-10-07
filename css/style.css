@@ -1,0 +1,114 @@
+* {
+	margin: 0;
+	padding: 0;
+	transition: all .2s ease-in;
+}
+
+html {
+	height: 100%;
+}
+html, body {
+    min-height: 100%;
+}
+body {
+	font-family: "Trebuchet MC", Trebuchet, Arial, sans-serif;
+	border: 25px solid #fff;
+	background-color: #3b3f45;
+
+}
+
+header,
+footer {
+	padding: 20px 0 20px;
+	text-align: center;
+	max-width: 100%;
+	background-color: #4a4f56;
+	color: #eb7e7f;
+	font-size: 25px;
+}
+.footer {
+	max-width: 60%;
+	margin: 0 auto;
+}
+
+.my-header h1 {
+	font-size: 35px;
+}
+.container {
+	background-color: #3b3f45;
+	max-width: 100%;
+}
+.shopping-list {
+	padding: 30px;
+	margin: 0 auto;
+	width: 60%;
+	list-style-type: none;
+	color: #FFF;
+}
+.shopping-list li {
+	background-color: #88839e;
+}
+.shopping-list li:nth-child(2n) {
+	background-color: #7a7593;
+}
+.shopping-list label {
+	display: block;
+	padding: 10px;
+	cursor: pointer;
+	color: #FFF;
+	font-size: 25px;
+	border-top: 4px solid transparent;
+	border-bottom: 4px solid transparent;
+}
+.shopping-list label:hover {
+	border-top: 4px solid #fff;
+	border-bottom: 4px solid #fff;
+	background-color: #625e77;
+}
+.shopping-list label:active {
+	background-color: #eb7e7f;
+	}
+.shopping-list input[type="checkbox"] {
+	/* height: 25px;
+	width: 25px;
+	cursor: pointer;
+	margin: 0 20px 0 10px;
+	top: 5px;
+	position: relative; */
+	display: none;
+}
+.shopping-list label:before {
+	content: "";
+	height: 25px;
+		width: 25px;
+		cursor: pointer;
+		margin: 0 20px 0 10px;
+		top: 5px;
+		position: relative;
+		display: inline-block;
+		border: 2px solid #fff;
+}
+.shopping-list [type="checkbox"]:checked + label:before {
+	/* background-color: #FFF; */
+	background: url("../images/check.png") #fff center center no-repeat;
+}
+
+.shopping-list input[type="checkbox"]:checked ~ label {
+	text-decoration: line-through;
+	color: #a3a0b5;
+}
+.description {
+	font-size: 15px;
+	color: #c8cbd4;
+	vertical-align: middle;
+}
+.description:before {
+	content: "(";
+}
+.description:after {
+	content: ")";
+}
+.description:empty:before,
+.description:empty:after {
+	content: none;
+}
